@@ -27,7 +27,7 @@
                     android:textColor="@color/colorPrimary"/>
                 <TextView
                     style="@style/TextRegularNormal"
-                    android:text="@string/desc_splash"
+                    android:text="Electronic Health Record Application"
                     android:layout_marginTop="@dimen/dimens_10dp"/>
                 <TextView
                     android:id="@+id/tv_version_number"
