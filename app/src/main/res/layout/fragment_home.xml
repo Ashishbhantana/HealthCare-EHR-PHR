@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearVerticalDefault">
+
+    <androidx.appcompat.widget.Toolbar
+        style="@style/ToolbarDefault"
+        android:elevation="@dimen/dimens_4dp"
+        app:contentInsetStart="@dimen/dimens_0dp">
+        <TextView
+            style="@style/TextBoldExtraBig"
+            android:layout_width="match_parent"
+            android:text="@string/app_name"
+            android:gravity="center"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_home"
+        style="@style/SwipeRefreshDefault">
+        <androidx.core.widget.NestedScrollView
+            style="@style/NestedScrollDefault">
+            <LinearLayout
+                style="@style/LinearVerticalWrap"
+                android:layout_marginTop="@dimen/dimens_20dp">
+
+                <include
+                    android:id="@+id/card_covid"
+                    layout="@layout/layout_covid19_alert"
+                    android:visibility="gone"/>
+
+                <include
+                    android:id="@+id/include_layout_welcome"
+                    layout="@layout/layout_welcome"/>
+
+                <include
+                    android:id="@+id/include_layout_menu_dashboard"
+                    layout="@layout/layout_menu_dashboard"/>
+
+                <include
+                    android:id="@+id/layout_menstrual_period"
+                    layout="@layout/layout_menstrual_period"
+                    android:visibility="gone"/>
+
+                <include
+                    android:id="@+id/include_layout_medical_records"
+                    layout="@layout/layout_medical_records"
+                    android:visibility="gone"/>
+
+                <include
+                    android:id="@+id/include_layout_news"
+                    layout="@layout/layout_news"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
